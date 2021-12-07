@@ -3772,7 +3772,7 @@ textarea.form-control-lg {
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem;
+  box-shadow: 0 0 0 0;
 }
 
 .navbar-toggler-icon {
@@ -14707,11 +14707,68 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#main-menu .nav-item {
+#main-menu .social-media {
+  display: inline-flex;
+}
+#main-menu button.collapsed #menu-toggler {
+  position: relative;
+  margin: 16px 0;
+  width: 50px;
+  height: 4px;
+  background: #FFF;
+}
+#main-menu button.collapsed #menu-toggler::after, #main-menu button.collapsed #menu-toggler::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  top: -11px;
+  background: #FFF;
+  transform: rotate(0deg);
+}
+#main-menu button.collapsed #menu-toggler::after {
+  top: 11px;
+}
+#main-menu button #menu-toggler {
+  position: relative;
+  margin: 16px 0;
+  width: 50px;
+  height: 4px;
+  transition: all 0.2s ease-in;
+}
+#main-menu button #menu-toggler::after, #main-menu button #menu-toggler::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  background: #FFF;
+  transform: rotate(45deg);
+  transition: all 0.2s ease;
+}
+#main-menu button #menu-toggler::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#main-menu .border-hover {
   border-bottom: 1px solid transparent;
 }
-#main-menu .nav-item:hover {
+#main-menu .border-hover:hover {
   border-bottom: 1px solid #1F2937;
+}
+#main-menu .border-hover.is-active {
+  border-bottom: 1px solid #1F2937;
+}
+
+@media (max-width: 500px) {
+  #main-menu .navbar-brand {
+    max-width: 200px;
+  }
+  #main-menu .social-media {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
