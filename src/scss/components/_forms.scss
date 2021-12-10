@@ -1,0 +1,37 @@
+#orcamento {
+  form {
+    label {
+      display: block;
+      padding-bottom: 8px;
+    }
+    input {
+      background: linear-gradient(180deg, rgba(252, 250, 246, 0.3) 0%, rgba(229, 223, 211, 0.3) 100%);
+      box-shadow: 0px 1px 0px rgba(78, 101, 162, 0.5);
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      padding: 1rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      border: none;
+      appearance: none;
+      outline: none;
+      color: $black-5;
+    }
+    button {
+      background: linear-gradient(90deg, #EF5F53 0%, #FA8F70 100%);
+      box-shadow: 0px 5px 5px -25px rgba(80, 64, 128, 0.15);
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      padding: 1em 2em;
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+}
