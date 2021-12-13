@@ -16880,18 +16880,37 @@ textarea.form-control-lg {
   width: 100%;
 }
 #piscinas .carrossel-linhas .swiper-slide {
-  max-width: 257px;
-  min-height: 200px;
+  width: auto;
+  height: 200px;
   text-decoration: none;
 }
 #piscinas .carrossel-linhas .swiper-slide img {
   border-radius: 5px;
+  width: 100%;
 }
 #piscinas .carrossel-linhas .swiper-slide span {
   color: #6D6E71;
 }
 #piscinas .carrossel-linhas .swiper-slide.is-active span {
   color: #233673;
+}
+@media (min-width: 992px) {
+  #piscinas .carrossel-linhas .swiper-slide {
+    width: 216px;
+    height: 195px;
+  }
+}
+@media (min-width: 1200px) {
+  #piscinas .carrossel-linhas .swiper-slide {
+    width: 261px;
+    height: 225px;
+  }
+}
+@media (min-width: 1400px) {
+  #piscinas .carrossel-linhas .swiper-slide {
+    width: 306px;
+    height: 250px;
+  }
 }
 #piscinas #detalhes .carrossel-tamanhos {
   width: 100%;

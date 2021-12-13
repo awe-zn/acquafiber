@@ -25,11 +25,12 @@
   .carrossel-linhas {
     width: 100%;
     .swiper-slide {
-      max-width: 257px;
-      min-height: 200px;
+      width: auto;
+      height: 200px;
       text-decoration: none;
       img {
         border-radius: 5px;
+        width: 100%;
       }
       span {
         color: $black-4;
@@ -38,6 +39,24 @@
         span {
           color: $blue-2;
         }
+      }
+    }
+    @media (min-width: 992px) {
+      .swiper-slide {
+        width: 216px;
+        height: 195px;
+      }
+    }
+    @media (min-width: 1200px) {
+      .swiper-slide {
+        width: 261px;
+        height: 225px;
+      }
+    }
+    @media (min-width: 1400px) {
+      .swiper-slide {
+        width: 306px;
+        height: 250px;
       }
     }
   }

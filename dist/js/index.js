@@ -25,6 +25,7 @@ const swiper = new Swiper('.carrossel-linhas', {
   spaceBetween: 24,
   breakpoints: {
     992: {
+      spaceBetween: 0,
       enabled: false,
     }
   }
