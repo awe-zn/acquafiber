@@ -16816,20 +16816,6 @@ textarea.form-control-lg {
   background: linear-gradient(90deg, #EF5F53 0%, #FA8F70 100%);
 }
 
-.card-modelo img {
-  border-radius: 5px;
-}
-.card-modelo span {
-  color: #6D6E71;
-}
-.card-modelo.is-active span {
-  color: #233673;
-}
-.card-modelo:hover {
-  transform: scale(1.05);
-  transition: all 0.1s;
-}
-
 #orcamento form label {
   display: block;
   padding-bottom: 8px;
@@ -16864,8 +16850,79 @@ textarea.form-control-lg {
   font-size: 16px;
 }
 
-.container {
-  padding: 0 32px 0 32px;
+#catalogo .carrossel-linhas {
+  width: 100%;
+}
+#catalogo .carrossel-linhas .swiper-slide {
+  width: 257px;
+  min-height: 200px;
+  text-decoration: none;
+}
+#catalogo .carrossel-linhas .swiper-slide img {
+  border-radius: 5px;
+}
+#catalogo .carrossel-linhas .swiper-slide span {
+  color: #6D6E71;
+}
+#catalogo .carrossel-linhas .swiper-slide.is-active span {
+  color: #233673;
+}
+#catalogo #detalhes .swiper-prev, #catalogo #detalhes .swiper-next {
+  border: 1px solid #3655B3;
+  width: 39px;
+  height: 39px;
+  border-radius: 5px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#catalogo #detalhes .swiper-prev.swiper-button-disabled, #catalogo #detalhes .swiper-next.swiper-button-disabled {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+#catalogo #detalhes .swiper-prev {
+  transform: rotate(180deg);
+}
+#catalogo #detalhes .carrossel-tamanhos {
+  width: 100%;
+  background: linear-gradient(180deg, #F7F3F4 0%, #ffffff 100%);
+}
+#catalogo #detalhes .carrossel-tamanhos .swiper-slide {
+  width: auto;
+  height: 200px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #3655B3;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #F59E0B;
+    border-radius: 20px;
+    border: 3px solid #3655B3;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 32px 0 32px;
+  }
+}
+.emphasis {
+  color: #233673;
+  font-weight: bold;
+  background: url(/dist/img/svg/waves.svg) no-repeat bottom;
+  padding: 2px 8px;
+}
+
+.emphasis-2 {
+  background: linear-gradient(transparent 60%, #F2C94C 50%);
 }
 
 .ff-ubuntu {
@@ -16904,6 +16961,18 @@ textarea.form-control-lg {
   top: 9px;
   left: 0;
 }
+#catalogo #detalhes {
+  border: 1px solid #F2F3F5;
+  padding: 0;
+  margin-top: 45px;
+  border-radius: 20px;
+  background: url(/dist/img/svg/blue-arrow.svg) no-repeat center;
+  background-position-y: -10px;
+}
+#catalogo #detalhes img.img-detalhe {
+  border-radius: 10px;
+  box-shadow: 10px 25px 25px -25px rgba(80, 64, 128, 0.5);
+}
 
 #duvidas {
   background: linear-gradient(90deg, #FC4A1A 0%, #F7B733 100%);
@@ -16916,13 +16985,6 @@ textarea.form-control-lg {
   background: url(/dist/img/gotas.png);
   position: absolute;
   left: -270px;
-}
-
-#sobre .emphasis {
-  color: #233673;
-  font-weight: bold;
-  background: url(/dist/img/svg/waves.svg) no-repeat bottom;
-  padding: 2px 8px;
 }
 
 #orcamento {

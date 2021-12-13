@@ -1,9 +1,40 @@
 @import 'bootstrap';
 @import 'components';
 
+//scrollbar
+@media (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: $blue;      
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $yellow;  
+    border-radius: 20px;     
+    border: 3px solid $blue; 
+  }
+}
+
 //geral
-.container {
-  padding: 0 32px 0 32px;
+@media (max-width: 576px) {
+  .container {
+    padding: 0 32px 0 32px;
+  }
+}
+
+//estilos de texto
+.emphasis {
+  color: $blue-2;
+  font-weight: bold;
+  background: url(/dist/img/svg/waves.svg) no-repeat bottom;
+  padding: 2px 8px;
+}
+
+.emphasis-2 {
+  background: linear-gradient(transparent 60%, $yellow-2 50%);
 }
 
 //fontes
@@ -44,6 +75,19 @@
     top: 9px;
     left: 0;
   }
+  #detalhes {
+    border: 1px solid #F2F3F5;
+    padding: 0;
+    margin-top: 45px;
+    border-radius: 20px;
+    background: url(/dist/img/svg/blue-arrow.svg) no-repeat center;
+    background-position-y: -10px;
+
+    img.img-detalhe {
+      border-radius: 10px;
+      box-shadow: 10px 25px 25px -25px rgba(80, 64, 128, 0.5);
+    }
+  }
 }
 
 #duvidas {
@@ -57,15 +101,6 @@
     background: url(/dist/img/gotas.png);
     position: absolute;
     left: -270px;
-  }
-}
-
-#sobre {
-  .emphasis {
-    color: $blue-2;
-    font-weight: bold;
-    background: url(/dist/img/svg/waves.svg) no-repeat bottom;
-    padding: 2px 8px;
   }
 }
 
