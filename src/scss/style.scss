@@ -1,20 +1,20 @@
-@import 'bootstrap';
-@import 'components';
+@import "bootstrap";
+@import "components";
 
 //scrollbar
 @media (max-width: 768px) {
   body::-webkit-scrollbar {
     width: 12px;
   }
-  
+
   body::-webkit-scrollbar-track {
-    background: $blue;      
+    background: $blue;
   }
-  
+
   body::-webkit-scrollbar-thumb {
-    background-color: $yellow;  
-    border-radius: 20px;     
-    border: 3px solid $blue; 
+    background-color: $yellow;
+    border-radius: 20px;
+    border: 3px solid $blue;
   }
 }
 
@@ -25,58 +25,45 @@
   }
 }
 
-//estilos de texto
-.emphasis {
-  color: $blue-2;
-  font-weight: bold;
-  background: url(/dist/img/svg/waves.svg) no-repeat bottom;
-  padding: 2px 8px;
-}
-
-.emphasis-2 {
-  background: linear-gradient(transparent 60%, $yellow-2 50%);
-}
-
 //fontes
 .ff-ubuntu {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .ff-open-sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .ff-nunito {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
+//Header
+@media (max-width: 355px) {
+  header .navbar-brand img {
+    width: 150px;
+  }
+}
+
+//Main
 #main-home {
   background: url(/dist/img/background-main.jpg) no-repeat top right;
   background-size: cover;
-  &>div {
+  & > div {
     padding: 180px 0 136px 0;
     background: linear-gradient(270deg, rgba(33, 184, 217, 0) 0%, #063266 100%);
   }
 }
 
-#introducao-catalogo {
-  background: #F7F9FF;
+//Piscinas
+#introducao-piscinas {
+  background: #f7f9ff;
 }
 
-#catalogo {
-  h4::before {
-    content: '';
-    display: block;
-    background: $blue;
-    width: 27px;
-    height: 11px;
-    border-radius: 2px;
-    position: absolute;
-    top: 9px;
-    left: 0;
-  }
+#piscinas {
   #detalhes {
-    border: 1px solid #F2F3F5;
+    border: 1px solid #f2f3f5;
+    box-shadow: 0px 15px 15px #fff7f2;
     padding: 0;
     margin-top: 45px;
     border-radius: 20px;
@@ -90,11 +77,15 @@
   }
 }
 
-#duvidas {
-  background: linear-gradient(90deg, #FC4A1A 0%, #F7B733 100%);
+#mais-piscinas {
+  background: #F7F9FF;
+}
 
+//Duvidas
+#duvidas {
+  background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
   .gotas::before {
-    content: '';
+    content: "";
     display: block;
     width: 317px;
     height: 239px;
@@ -104,7 +95,8 @@
   }
 }
 
+//Orçamento
 #orcamento {
-  background: #F7F9FF;
+  background: #f7f9ff;
   padding: 80px 0 90px 0;
 }

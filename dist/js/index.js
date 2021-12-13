@@ -38,3 +38,12 @@ const swiper2 = new Swiper('.carrossel-tamanhos', {
   slidesPerView: 'auto',
   spaceBetween: 19,
 });
+
+const swiper3 = new Swiper('.carrossel-outras-linhas', {
+  navigation: {
+    nextEl: '.swiper-next-2',
+    prevEl: '.swiper-prev-2',
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 19,
+});

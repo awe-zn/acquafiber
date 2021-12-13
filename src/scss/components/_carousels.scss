@@ -1,8 +1,31 @@
-#catalogo {
+//botões
+.swiper-prev,
+.swiper-prev-2,
+.swiper-next,
+.swiper-next-2 {
+  border: 1px solid $blue;
+  width: 39px;
+  height: 39px;
+  border-radius: 5px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.swiper-button-disabled {
+    filter: grayscale(1);
+    opacity: 0.6;
+  }
+}
+.swiper-prev,
+.swiper-prev-2 {
+  transform: rotate(180deg);
+}
+
+#piscinas {
   .carrossel-linhas {
     width: 100%;
     .swiper-slide {
-      width: 257px;
+      max-width: 257px;
       min-height: 200px;
       text-decoration: none;
       img {
@@ -19,32 +42,25 @@
     }
   }
   #detalhes {
-
-    .swiper-prev, .swiper-next {
-      border: 1px solid $blue;
-      width: 39px;
-      height: 39px;
-      border-radius: 5px;
-      background: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &.swiper-button-disabled {
-        filter: grayscale(1);
-        opacity: 0.6;
-      }
-    }
-    .swiper-prev {
-      transform: rotate(180deg);
-    }
     .carrossel-tamanhos {
       width: 100%;
-      background: linear-gradient(180deg, #F7F3F4 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #f7f3f4 0%, #ffffff 100%);
       .swiper-slide {
         width: auto;
         height: 200px;
         position: relative;
       }
     }
+  }
+}
+
+#mais-piscinas .carrossel-outras-linhas {
+  .swiper-slide {
+    width: auto;
+    min-width: 204px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: 1px solid $blue;
+    text-decoration: none;
   }
 }
