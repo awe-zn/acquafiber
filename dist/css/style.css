@@ -17003,13 +17003,21 @@ textarea.form-control-lg {
     width: 150px;
   }
 }
-#main-home {
-  background: url(/dist/img/background-main.jpg) no-repeat top right;
-  background-size: cover;
+#main-home .swiper-main .swiper-main-next, #main-home .swiper-main .swiper-main-prev {
+  width: 64px;
+  height: 64px;
+  background: #FFFFFF80;
+  border-radius: 50%;
+  background-image: url(/dist/img/svg/next-prev-arrow-2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
-#main-home > div {
-  padding: 180px 0 136px 0;
-  background: linear-gradient(270deg, rgba(33, 184, 217, 0) 0%, #063266 100%);
+#main-home .swiper-main .swiper-main-next.swiper-button-disabled, #main-home .swiper-main .swiper-main-prev.swiper-button-disabled {
+  filter: grayscale(0.8);
+}
+#main-home .swiper-main .swiper-main-prev {
+  transform: rotate(180deg);
+  right: 70px;
 }
 
 #introducao-piscinas {
@@ -17046,7 +17054,27 @@ textarea.form-control-lg {
   position: absolute;
   left: -270px;
 }
+#duvidas div.expanded {
+  display: none;
+}
 
+@media (min-width: 768px) {
+  #duvidas div.collapsed {
+    display: none;
+  }
+  #duvidas div.expanded {
+    display: block;
+  }
+  #duvidas.sticky-top .gotas::before {
+    display: none;
+  }
+  #duvidas.sticky-top div.collapsed {
+    display: block;
+  }
+  #duvidas.sticky-top div.expanded {
+    display: none;
+  }
+}
 #orcamento {
   background: #f7f9ff;
   padding: 80px 0 90px 0;

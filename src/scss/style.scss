@@ -47,11 +47,24 @@
 
 //Main
 #main-home {
-  background: url(/dist/img/background-main.jpg) no-repeat top right;
-  background-size: cover;
-  & > div {
-    padding: 180px 0 136px 0;
-    background: linear-gradient(270deg, rgba(33, 184, 217, 0) 0%, #063266 100%);
+
+  .swiper-main {
+    .swiper-main-next, .swiper-main-prev {
+      width: 64px;
+      height: 64px;
+      background: #FFFFFF80;
+      border-radius: 50%;
+      background-image: url(/dist/img/svg/next-prev-arrow-2.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      &.swiper-button-disabled {
+        filter: grayscale(0.8);
+      }
+    }
+    .swiper-main-prev {
+      transform: rotate(180deg);
+      right: 70px;
+    }
   }
 }
 
@@ -84,6 +97,7 @@
 //Duvidas
 #duvidas {
   background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
+
   .gotas::before {
     content: "";
     display: block;

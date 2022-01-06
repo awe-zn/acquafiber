@@ -20,6 +20,19 @@ function handleClick({currentTarget}) {
   
 }
 
+const swiperMain = new Swiper('.swiper-main', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 5000,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-main-next',
+    prevEl: '.swiper-main-prev',
+  },
+});
+
 const swiper = new Swiper('.carrossel-linhas', {
   slidesPerView: "auto",
   spaceBetween: 24,
@@ -48,3 +61,20 @@ const swiper3 = new Swiper('.carrossel-outras-linhas', {
   slidesPerView: 'auto',
   spaceBetween: 19,
 });
+
+//section "duvidas"
+// const duvidas = document.querySelector('#duvidas');
+
+// window.addEventListener('scroll', verificarAltura);
+
+// function verificarAltura() {
+//   // duvidas.getBoundingClientRect().top
+
+//   if(duvidas.getBoundingClientRect().top <= 64 && window.screen.width > 768) {
+//     console.log('ta zero oiakk');
+//     duvidas.classList.add('sticky-top');
+//   } else if(duvidas.getBoundingClientRect().top >= 64) {
+//     console.log('ixe ta zero naokkk');
+//     duvidas.classList.remove('sticky-top');
+//   }
+// }
