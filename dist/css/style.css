@@ -17054,27 +17054,19 @@ textarea.form-control-lg {
   position: absolute;
   left: -270px;
 }
-#duvidas div.expanded {
+#duvidas .duvidas-fixo {
+  display: block;
+}
+#duvidas .duvidas-sticky {
   display: none;
 }
-
-@media (min-width: 768px) {
-  #duvidas div.collapsed {
-    display: none;
-  }
-  #duvidas div.expanded {
-    display: block;
-  }
-  #duvidas.sticky-top .gotas::before {
-    display: none;
-  }
-  #duvidas.sticky-top div.collapsed {
-    display: block;
-  }
-  #duvidas.sticky-top div.expanded {
-    display: none;
-  }
+#duvidas.sticky-top .duvidas-fixo {
+  display: none;
 }
+#duvidas.sticky-top .duvidas-sticky {
+  display: block;
+}
+
 #orcamento {
   background: #f7f9ff;
   padding: 80px 0 90px 0;

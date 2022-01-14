@@ -107,6 +107,22 @@
     position: absolute;
     left: -270px;
   }
+
+  .duvidas-fixo {
+    display: block;
+  }
+  .duvidas-sticky {
+    display: none;
+  }
+
+  &.sticky-top {
+    .duvidas-fixo {
+      display: none;
+    }
+    .duvidas-sticky {
+      display: block;
+    }
+  }
 }
 
 //Orçamento
