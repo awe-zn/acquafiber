@@ -23,6 +23,7 @@ function handleClick({currentTarget}) {
 const swiperMain = new Swiper('.swiper-main', {
   slidesPerView: 1,
   simulateTouch: false,
+  allowTouchMove: false,
   spaceBetween: 0,
   autoplay: {
     delay: 5000,
