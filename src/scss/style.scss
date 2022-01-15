@@ -47,12 +47,12 @@
 
 //Main
 #main-home {
-
   .swiper-main {
-    .swiper-main-next, .swiper-main-prev {
+    .swiper-main-next,
+    .swiper-main-prev {
       width: 64px;
       height: 64px;
-      background: #FFFFFF80;
+      background: #ffffff80;
       border-radius: 50%;
       background-image: url(/dist/img/svg/next-prev-arrow-2.svg);
       background-position: center;
@@ -91,7 +91,7 @@
 }
 
 #mais-piscinas {
-  background: #F7F9FF;
+  background: #f7f9ff;
 }
 
 //Duvidas
@@ -108,18 +108,22 @@
     left: -270px;
   }
 
+  // .duvidas-normal {
+  //   display: block;
+  // }
   .duvidas-fixo {
-    display: block;
-  }
-  .duvidas-sticky {
     display: none;
   }
 
-  &.sticky-top {
+  &.fixar {
+    // .duvidas-normal {
+    //   display: block;
+    // }
     .duvidas-fixo {
-      display: none;
-    }
-    .duvidas-sticky {
+      background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
+      width: 100%;
+      position: fixed;
+      bottom: 0;
       display: block;
     }
   }

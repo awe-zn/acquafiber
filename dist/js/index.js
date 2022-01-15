@@ -66,13 +66,16 @@ const swiper3 = new Swiper('.carrossel-outras-linhas', {
 
 //section "duvidas"
 const duvidas = document.querySelector('#duvidas');
+const footer = document.querySelector('#footer');
 
 window.addEventListener('scroll', verificarAltura);
 
 function verificarAltura() {
-  if(duvidas.getBoundingClientRect().top <= 64 && window.screen.width >= 992) {
-    duvidas.classList.add('sticky-top');
-  } else if(duvidas.getBoundingClientRect().top >= -64) {
-    duvidas.classList.remove('sticky-top');
+  if(duvidas.getBoundingClientRect().bottom <= 0 && window.screen.width >= 992) {
+    duvidas.classList.add('fixar');
+    footer.style.marginBottom = '92px';
+  } else if(duvidas.getBoundingClientRect().bottom >= 0) {
+    duvidas.classList.remove('fixar');
+    footer.style.marginBottom = '0px';
   }
 }

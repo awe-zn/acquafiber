@@ -17003,16 +17003,18 @@ textarea.form-control-lg {
     width: 150px;
   }
 }
-#main-home .swiper-main .swiper-main-next, #main-home .swiper-main .swiper-main-prev {
+#main-home .swiper-main .swiper-main-next,
+#main-home .swiper-main .swiper-main-prev {
   width: 64px;
   height: 64px;
-  background: #FFFFFF80;
+  background: #ffffff80;
   border-radius: 50%;
   background-image: url(/dist/img/svg/next-prev-arrow-2.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
-#main-home .swiper-main .swiper-main-next.swiper-button-disabled, #main-home .swiper-main .swiper-main-prev.swiper-button-disabled {
+#main-home .swiper-main .swiper-main-next.swiper-button-disabled,
+#main-home .swiper-main .swiper-main-prev.swiper-button-disabled {
   filter: grayscale(0.8);
 }
 #main-home .swiper-main .swiper-main-prev {
@@ -17039,7 +17041,7 @@ textarea.form-control-lg {
 }
 
 #mais-piscinas {
-  background: #F7F9FF;
+  background: #f7f9ff;
 }
 
 #duvidas {
@@ -17055,15 +17057,13 @@ textarea.form-control-lg {
   left: -270px;
 }
 #duvidas .duvidas-fixo {
-  display: block;
-}
-#duvidas .duvidas-sticky {
   display: none;
 }
-#duvidas.sticky-top .duvidas-fixo {
-  display: none;
-}
-#duvidas.sticky-top .duvidas-sticky {
+#duvidas.fixar .duvidas-fixo {
+  background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   display: block;
 }
 
