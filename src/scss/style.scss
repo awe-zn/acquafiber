@@ -1,0 +1,136 @@
+@import "bootstrap";
+@import "components";
+
+//scrollbar
+@media (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: $blue;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+    border-radius: 20px;
+    border: 3px solid $blue;
+  }
+}
+
+//geral
+@media (max-width: 576px) {
+  .container {
+    padding: 0 32px 0 32px;
+  }
+}
+
+//fontes
+.ff-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.ff-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.ff-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+//Header
+@media (max-width: 355px) {
+  header .navbar-brand img {
+    width: 150px;
+  }
+}
+
+//Main
+#main-home {
+  .swiper-main {
+    .swiper-main-next,
+    .swiper-main-prev {
+      width: 64px;
+      height: 64px;
+      background: #ffffff80;
+      border-radius: 50%;
+      background-image: url(/dist/img/svg/next-prev-arrow-2.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      &.swiper-button-disabled {
+        filter: grayscale(0.8);
+      }
+    }
+    .swiper-main-prev {
+      transform: rotate(180deg);
+      right: 70px;
+    }
+  }
+}
+
+//Piscinas
+#introducao-piscinas {
+  background: #f7f9ff;
+}
+
+#piscinas {
+  #detalhes {
+    border: 1px solid #f2f3f5;
+    box-shadow: 0px 15px 15px #fff7f2;
+    padding: 0;
+    margin-top: 45px;
+    border-radius: 20px;
+    background: url(/dist/img/svg/blue-arrow.svg) no-repeat center;
+    background-position-y: -10px;
+
+    img.img-detalhe {
+      border-radius: 10px;
+      box-shadow: 10px 25px 25px -25px rgba(80, 64, 128, 0.5);
+    }
+  }
+}
+
+#mais-piscinas {
+  background: #f7f9ff;
+}
+
+//Duvidas
+#duvidas {
+  background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
+
+  .gotas::before {
+    content: "";
+    display: block;
+    width: 317px;
+    height: 239px;
+    background: url(/dist/img/gotas.png);
+    position: absolute;
+    left: -270px;
+  }
+
+  // .duvidas-normal {
+  //   display: block;
+  // }
+  .duvidas-fixo {
+    display: none;
+  }
+
+  &.fixar {
+    // .duvidas-normal {
+    //   display: block;
+    // }
+    .duvidas-fixo {
+      background: linear-gradient(90deg, #fc4a1a 0%, #f7b733 100%);
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      display: block;
+    }
+  }
+}
+
+//Orçamento
+#orcamento {
+  background: #f7f9ff;
+  padding: 80px 0 90px 0;
+}
