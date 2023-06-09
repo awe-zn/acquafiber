@@ -17007,11 +17007,6 @@ textarea.form-control-lg {
 #main-home .swiper-main .swiper-main-prev {
   width: 64px;
   height: 64px;
-  background: #ffffff80;
-  border-radius: 50%;
-  background-image: url(/dist/img/svg/next-prev-arrow-2.svg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 #main-home .swiper-main .swiper-main-next.swiper-button-disabled,
 #main-home .swiper-main .swiper-main-prev.swiper-button-disabled {

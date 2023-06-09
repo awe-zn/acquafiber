@@ -1,26 +1,31 @@
-const modelos = document.querySelectorAll('[data-modelo]');
-const detalhes = document.querySelectorAll('[data-detalhe]');
+const modelos = document.querySelectorAll("[data-modelo]");
+const detalhes = document.querySelectorAll("[data-detalhe]");
 
-modelos.forEach(i => {
-  i.addEventListener('click', handleClick);
+modelos.forEach((i) => {
+  i.addEventListener("click", handleClick);
+  i.classList.remove("is-active");
 });
 
-function handleClick({currentTarget}) {
-  modelos.forEach(i => {
-    i.classList.remove('is-active');
+detalhes[0].classList.remove("d-none");
+modelos[0].classList.add("is-active");
+
+function handleClick({ currentTarget }) {
+  modelos.forEach((i) => {
+    i.classList.remove("is-active");
   });
-  currentTarget.classList.add('is-active');
-  detalhes.forEach(i => {
-    if(i.id.replace('detalhe-', '') === currentTarget.id.replace('modelo-', '')) {
-      i.classList.remove('d-none');
+  currentTarget.classList.add("is-active");
+  detalhes.forEach((i) => {
+    if (
+      i.id.replace("detalhe-", "") === currentTarget.id.replace("modelo-", "")
+    ) {
+      i.classList.remove("d-none");
     } else {
-      i.classList.add('d-none');
+      i.classList.add("d-none");
     }
   });
-  
 }
 
-const swiperMain = new Swiper('.swiper-main', {
+const swiperMain = new Swiper(".swiper-main", {
   slidesPerView: 1,
   simulateTouch: false,
   allowTouchMove: false,
@@ -30,52 +35,68 @@ const swiperMain = new Swiper('.swiper-main', {
   },
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-main-next',
-    prevEl: '.swiper-main-prev',
+    nextEl: ".swiper-main-next",
+    prevEl: ".swiper-main-prev",
   },
 });
 
-const swiper = new Swiper('.carrossel-linhas', {
+const swiper = new Swiper(".carrossel-linhas", {
   slidesPerView: "auto",
   spaceBetween: 24,
   breakpoints: {
     992: {
       spaceBetween: 0,
       enabled: false,
-    }
-  }
+    },
+  },
 });
 
-const swiper2 = new Swiper('.carrossel-tamanhos', {
+const swiper2 = new Swiper(".carrossel-tamanhos", {
   navigation: {
-    nextEl: '.swiper-next',
-    prevEl: '.swiper-prev',
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
   },
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 19,
 });
 
-const swiper3 = new Swiper('.carrossel-outras-linhas', {
+const swiper3 = new Swiper(".carrossel-outras-linhas", {
   navigation: {
-    nextEl: '.swiper-next-2',
-    prevEl: '.swiper-prev-2',
+    nextEl: ".swiper-next-2",
+    prevEl: ".swiper-prev-2",
   },
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 19,
 });
 
 //section "duvidas"
-const duvidas = document.querySelector('#duvidas');
-const footer = document.querySelector('#footer');
+const duvidas = document.querySelector("#duvidas");
+const footer = document.querySelector("#footer");
 
-window.addEventListener('scroll', verificarAltura);
+window.addEventListener("scroll", verificarAltura);
 
 function verificarAltura() {
-  if(duvidas.getBoundingClientRect().bottom <= 0 && window.screen.width >= 992) {
-    duvidas.classList.add('fixar');
-    footer.style.marginBottom = '92px';
-  } else if(duvidas.getBoundingClientRect().bottom >= 0) {
-    duvidas.classList.remove('fixar');
-    footer.style.marginBottom = '0px';
+  if (
+    duvidas.getBoundingClientRect().bottom <= 0 &&
+    window.screen.width >= 992
+  ) {
+    duvidas.classList.add("fixar");
+    footer.style.marginBottom = "92px";
+  } else if (duvidas.getBoundingClientRect().bottom >= 0) {
+    duvidas.classList.remove("fixar");
+    footer.style.marginBottom = "0px";
   }
 }
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  responsiveClass: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+      nav: true,
+    },
+  },
+});

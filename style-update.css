@@ -1,0 +1,22 @@
+#main-menu .menu-item {
+  flex: 1 1 auto;
+  text-align: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+  padding: 8px;
+}
+
+#main-menu .menu-item a {
+  color: #1f2937;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+
+#main-menu .menu-item a:hover {
+  border-bottom: 1px solid #1f2937;
+}
+
+.sobre-nos a {
+  color: #ef5f53;
+}
