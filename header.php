@@ -55,7 +55,7 @@ $theme = get_bloginfo("template_url");
           <ul class="navbar-nav gap-3 text-uppercase fz-16 ff-open-sans align-items-center fw-semi-bold">
             <!--Links do whatsapp e instagram no desktop-->
             <li class="nav-item d-none d-lg-flex gap-1">
-              <a class="nav-link" href="https://api.whatsapp.com/send?phone=5584999455686">
+              <a class="nav-link" href="<?= get_field('whatsapp_link', get_option('home_page_id')); ?>" target="_blank">
                 <img src="<?= $theme; ?>/dist/img/svg/whatsapp.svg" alt="whatsapp">
               </a>
               <a class="nav-link" href="<?= get_field('instagram_link', get_option('home_page_id')); ?>" target="_blank">
