@@ -40,7 +40,7 @@ $theme = get_bloginfo("template_url");
 
         <!--Links do whatsapp e instagram no mobile-->
         <div class="d-lg-none ms-auto px-4 gap-3 justify-content-end social-media">
-          <a href="https://api.whatsapp.com/send?phone=5584999455686">
+          <a href="<?= get_field('whatsapp_link', get_option('home_page_id')); ?>" target="_blank">
             <img width="25" src="<?= $theme; ?>/dist/img/svg/whatsapp.svg" alt="whatsapp">
           </a>
           <a href="<?= get_field('instagram_link', get_option('home_page_id')); ?>" target="_blank">
