@@ -546,7 +546,6 @@ $theme = get_bloginfo("template_url");
             <a href="mailto:<?= get_field('email_atendimento', get_option('home_page_id')); ?>" class="text-black-3 text-orange-hover text-decoration-none">
               <?= get_field('email_atendimento', get_option('home_page_id')); ?>
             </a>
-            </p>
           </div>
           <div>
             <h5 class="ff-open-sans fz-16 fw-semi-bold">
@@ -564,7 +563,8 @@ $theme = get_bloginfo("template_url");
         </div>
       </div>
       <div class="col-12 col-md-10 col-lg-6 offset-lg-2 order-first order-lg-last px-lg-awe-32 pb-awe-64 pb-lg-0">
-        <?= do_shortcode('[contact-form-7 id="5" title="Formulário de orçamento"]'); ?>
+        <?= do_shortcode(get_field('formulario_orcamento', get_option('home_page_id'))); ?>
+
         <!-- <div class="ff-open-sans">
           <h3 class="text-blue ff-ubuntu fz-32 text-center">
             Solicite um orçamento

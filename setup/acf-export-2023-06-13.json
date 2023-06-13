@@ -224,6 +224,43 @@
                 "toolbar": "basic",
                 "media_upload": 0,
                 "delay": 0
+            },
+            {
+                "key": "field_6488609e97378",
+                "label": "Solicitação de orçamento",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_6488612097379",
+                "label": "Shortcode do formulário",
+                "name": "formulario_orcamento",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Ponha aqui o shortcode do formulário de orçamento (você irá encontrar ele no menu \"contato\" do seu painel wordpress).",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             }
         ],
         "location": [
@@ -231,7 +268,7 @@
                 {
                     "param": "page",
                     "operator": "==",
-                    "value": "6"
+                    "value": "73"
                 }
             ]
         ],
