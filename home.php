@@ -518,7 +518,7 @@ $theme = get_bloginfo("template_url");
 <section id="orcamento">
   <div class="container">
     <div class="row justify-content-center justify-content-lg-start">
-      <div class="col-12 col-lg-4 text-black-4" id="#contatos">
+      <div class="col-12 col-lg-4 text-black-4" id="contatos">
         <h4 class="fz-24 fw-bold ff-ubuntu">
           Nossos contatos
         </h4>
